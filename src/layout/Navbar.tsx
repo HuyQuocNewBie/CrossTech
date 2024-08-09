@@ -4,18 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import Button from "../component/button/Button";
-
+import Logo from "../assets/logo.svg"
 export const Navbar = () => {
   const [active, setActive] = useState<boolean>(false);
   const handleActive = () => {
     setActive(!active);
   }
+
   return (
     <>
       <header className="bg-#FFFF px-20 py-3 w-[1440px] h-[98px] mb-10">
         <div className="max-w-1240 mx-auto flex justify-between w-[1220px] h-[40px]">
           <div className="w-[52.8px] h-[40px]">
-            <img src="./public/img/logo.svg" alt="Logo" className="" />
+            <img src={Logo} alt="Logo"/>
           </div>
           <nav className="flex gap-[32px] leading-5 font-medium size-16 leading-4 text-[#6B6B6B] w-[407px] h-[24px]">
             <a  href="/tapos" className="w-[44px] h-[19px]">Tapos</a>
@@ -26,6 +27,7 @@ export const Navbar = () => {
               More 
               <FontAwesomeIcon icon={faChevronDown} className="absolute ps-2 w-[20px] h-[20px]" />
             </div>
+
           </nav>
           <div className="w-[150px] h-[34px] bg-[#EEC5C7] flex items-center rounded-2xl">
             <Appbutton disabled={active}>
@@ -63,7 +65,7 @@ export const Navbar = () => {
                                           You need connect your X account to join Social Task
                                           </h1>
                                           <div className="w-[87px] h-[16px] text-[#0D88D8]">
-                                              <h1 className="w-[71px] h-[16px] font-normal text-sm leading-4 relative">
+                                              <h1 className="w-[71px] h-[16px] font-normal text-sm leading-4 relative cursor-pointer">
                                               Learn more
                                               <FontAwesomeIcon icon={faChevronRight} className="w-[10px] h-[10px] absolute top-[4px]" />
                                               </h1>
